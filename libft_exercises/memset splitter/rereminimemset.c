@@ -2,10 +2,10 @@
 
 void mini_memset(void *s, unsigned char c, int n)
 {
-    unsigned char *ptr = (unsigned char *)s;
-
-    for (int i = 0; i < n; i++)
-        ptr[i] = c;
+    int i = 0;
+    unsigned char *ptr = (unsigned char *)c;
+    while()
+    
 
 }
 
