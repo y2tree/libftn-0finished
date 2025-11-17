@@ -12,4 +12,7 @@
 
 #include "libft.h"
 
-// TODO: Implement ft_memcpy according to the Libft subject.
+void *ft_memcpy(void *dest, const void *src, size_t n)
+{
+    
+}

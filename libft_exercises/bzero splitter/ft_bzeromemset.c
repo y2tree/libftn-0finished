@@ -1,15 +1,19 @@
 #include <stdio.h>
 
-void    ft_bzero(void *s, size_t n)
+void *ft_memset(void *s, int c, size_t n)
 {
     unsigned char *ptr = (unsigned char *)s;
 
     for (size_t i = 0; i < n; i++)
-        ptr[i] = 0;
+        ptr[i] = (unsigned char)c;
+    return s;
 }
 
+void ft_bzero(void *s, size_t n)
+{
+    ft_memset(s, 0, n);
+}
 
-/*
 int main()
 {
     char str[20] = "Hello World!";
@@ -26,4 +30,3 @@ int main()
     
     return 0;
 }
-*/
