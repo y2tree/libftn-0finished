@@ -12,4 +12,3 @@
 
 #include "libft.h"
 
-// TODO: Implement ft_memcmp according to the Libft subject.

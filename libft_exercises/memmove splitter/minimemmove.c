@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: student <student@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 00:00:00 by student           #+#    #+#             */
-/*   Updated: 2025/11/05 00:00:00 by student          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
 
 void *mini_memmove(void *dest, const void *src, size_t n)
@@ -17,7 +5,7 @@ void *mini_memmove(void *dest, const void *src, size_t n)
     unsigned char *d = (unsigned char *)dest;
     const unsigned char *s = (const unsigned char *)src;
     
-    if (!src || !dest)
+    if (src == NULL && dest == NULL)
         return NULL;
 
     if (d > s)
@@ -42,7 +30,6 @@ void *mini_memmove(void *dest, const void *src, size_t n)
     return (dest);
 }
 
-/*
 int main()
 {
     // Test 1 : Pas d'overlap
@@ -73,4 +60,3 @@ int main()
     
     return 0;
 }
-*/
