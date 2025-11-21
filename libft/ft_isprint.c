@@ -6,21 +6,22 @@
 /*   By: vasari <vasari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 14:30:12 by vasari            #+#    #+#             */
-/*   Updated: 2025/11/05 14:30:12 by vasari           ###   ########.fr       */
+/*   Updated: 2025/11/21 13:35:22 by vasari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c >= 32 && c <= 126)
-        return 1;
-    else
-        return 0;    
+	if (c >= 32 && c <= 126)
+		return (1);
+	else
+		return (0);
 }
 /*
 #include <stdio.h>
-int main()
+
+int	main(void)
 {
-    printf("%d", ft_isprint(127));
+	printf("%d", ft_isprint(127));
 }
 */

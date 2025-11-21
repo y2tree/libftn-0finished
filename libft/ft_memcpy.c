@@ -31,22 +31,20 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-
 /*
-int main()
+int	main(void)
 {
-    // Test 1 : Copier une string
-    char src1[] = "bonjour";
-    char dest1[20];
-    ft_memcpy(dest1, src1, 8);
-    printf("Test 1 : %s\n", dest1);
-    
-    // Test 2 : Copier des int
-    int src2[3] = {100, 200, 300};
-    int dest2[3];
-    ft_memcpy(dest2, src2, sizeof(src2));
-    printf("Test 2 : %d, %d, %d\n", dest2[0], dest2[1], dest2[2]);
-    
-    return 0;
+	char	src1[] = "bonjour";
+	char	dest1[20];
+	int		src2[3] = {100, 200, 300};
+	int		dest2[3];
+
+	// Test 1 : Copier une string
+	ft_memcpy(dest1, src1, 8);
+	printf("Test 1 : %s\n", dest1);
+	// Test 2 : Copier des int
+	ft_memcpy(dest2, src2, sizeof(src2));
+	printf("Test 2 : %d, %d, %d\n", dest2[0], dest2[1], dest2[2]);
+	return (0);
 }
 */

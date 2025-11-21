@@ -11,5 +11,22 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-// TODO: Implement ft_calloc according to the Libft subject.
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	size_t			total;
+	void			*ptr;
+	unsigned char	*s;
+
+	total = nmemb * size;
+	if (nmemb != 0 && total / nmemb != size)
+		return (NULL);
+	ptr = malloc(total);
+	if (!ptr)
+		return (NULL);
+	s = (unsigned char *)ptr;
+	while (total--)
+		*s++ = 0;
+	return (ptr);
+}

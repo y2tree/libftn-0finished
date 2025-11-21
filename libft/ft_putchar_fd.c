@@ -11,5 +11,16 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-// TODO: Implement ft_putchar_fd according to the Libft subject.
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}
+
+// int main()
+// {
+//     char a = 'A';
+//     ft_putchar_fd(a, 1);
+//     return (0);
+// }

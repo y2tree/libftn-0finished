@@ -12,4 +12,16 @@
 
 #include "libft.h"
 
-// TODO: Implement ft_putstr_fd according to the Libft subject.
+void	ft_putstr_fd(char *s, int fd)
+{
+	int	i;
+
+	if (!s)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
+}
