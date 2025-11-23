@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                          :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: student <student@42.fr>                    +#+  +:+       +#+        */
+/*   By: vasari <vasari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 00:00:00 by student           #+#    #+#             */
-/*   Updated: 2025/11/05 00:00:00 by student          ###   ########.fr       */
+/*   Updated: 2025/11/21 13:37:13 by vasari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	mini_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const unsigned char	*str1;
 	const unsigned char	*str2;
@@ -27,17 +27,5 @@ int	mini_memcmp(const void *s1, const void *s2, size_t n)
 			return (str1[i] - str2[i]);
 		i++;
 	}
-	return (0);
-}
-
-int	main(void)
-{
-	char	str1[] = "hello";
-	char	str2[] = "heelo";
-	char	str3[] = "abc";
-	char	str4[] = "abd";
-
-	printf("%d\n", mini_memcmp(str1, str2, 5)); // 0
-	printf("%d\n", mini_memcmp(str3, str4, 3)); // < 0 (car 'c' < 'd')
 	return (0);
 }

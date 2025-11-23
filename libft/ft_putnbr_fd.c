@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: student <student@42.fr>                    +#+  +:+       +#+        */
+/*   By: vasari <vasari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 00:00:00 by student           #+#    #+#             */
-/*   Updated: 2025/11/05 00:00:00 by student          ###   ########.fr       */
+/*   Updated: 2025/11/21 13:37:13 by vasari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -38,11 +37,4 @@ void	ft_putnbr_fd(int n, int fd)
 			write(fd, &conv, 1);
 		}
 	}
-}
-
-int	main(void)
-{
-	int i = 42;
-	ft_putnbr_fd(i, 1);
-	return (0);
 }

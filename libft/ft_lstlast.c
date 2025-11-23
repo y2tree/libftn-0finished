@@ -12,4 +12,12 @@
 
 #include "libft.h"
 
-// TODO: Implement ft_lstlast according to the Libft subject.
+t_list	*ft_lstlast(t_list *lst)
+{
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
+}
+

@@ -1,42 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                          :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: student <student@42.fr>                    +#+  +:+       +#+        */
+/*   By: vasari <vasari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 00:00:00 by student           #+#    #+#             */
-/*   Updated: 2025/11/05 00:00:00 by student          ###   ########.fr       */
+/*   Updated: 2025/11/21 13:37:13 by vasari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-
-int	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*str = (const char *)s;
+	const char	*str;
 	size_t		count;
 	size_t		i;
 
+	str = (const char *)s;
 	count = ft_strlen(str);
-	for (i = count; i > 0; i--)
+	i = count;
+	while (i > 0)
 	{
 		if (str[i - 1] == (char)c)
-		{
 			return ((char *)&str[i - 1]);
-		}
+		i--;
 	}
 	if (str[count] == (char)c)
 		return ((char *)&str[count]);

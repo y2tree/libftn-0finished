@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                          :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: student <student@42.fr>                    +#+  +:+       +#+        */
+/*   By: vasari <vasari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 00:00:00 by student           #+#    #+#             */
-/*   Updated: 2025/11/05 00:00:00 by student          ###   ########.fr       */
+/*   Updated: 2025/11/21 13:37:13 by vasari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void	*mini_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
-	const unsigned char	*s = (const unsigned char *)src;
-	size_t				i;
+	const unsigned char	*s;
 	size_t				i;
 
-	d = (unsigned char *)dest;
-	if (!src || !dest)
+	if (!src && !dest)
 		return (NULL);
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	i = 0;
 	if (d > s)
 	{
-		i = n;
-		while (i > 0)
-		{
-			i--;
-			d[i] = s[i];
-		}
+		while (n-- > 0)
+			d[n] = s[n];
 	}
 	else
 	{
-		i = 0;
 		while (i < n)
 		{
 			d[i] = s[i];
@@ -43,7 +39,6 @@ void	*mini_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/*
 int	main(void)
 {
 	char	str1[20] = "hello";

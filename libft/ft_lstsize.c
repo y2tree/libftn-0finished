@@ -12,4 +12,16 @@
 
 #include "libft.h"
 
-// TODO: Implement ft_lstsize according to the Libft subject.
+int	ft_lstsize(t_list *lst)
+{
+	int	count;
+
+	count = 0;
+	while (lst)
+	{
+		count++;
+		lst = lst->next;
+	}
+	return (count);
+}
+

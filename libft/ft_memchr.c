@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                          :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: student <student@42.fr>                    +#+  +:+       +#+        */
+/*   By: vasari <vasari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 00:00:00 by student           #+#    #+#             */
-/*   Updated: 2025/11/05 00:00:00 by student          ###   ########.fr       */
+/*   Updated: 2025/11/21 13:37:13 by vasari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-void	*mini_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const unsigned char	*str = (unsigned char *)s;
+	const unsigned char	*str;
 	unsigned char		a;
 	size_t				i;
 
+	str = (unsigned char *)s;
 	a = (unsigned char)c;
 	i = 0;
 	while (i < n)
@@ -28,17 +28,4 @@ void	*mini_memchr(const void *s, int c, size_t n)
 		i++;
 	}
 	return (NULL);
-}
-
-int	main(void)
-{
-	char	str[] = "hello word";
-	char	*result;
-
-	result = mini_memchr(str, 'w', 11);
-	if (result)
-		printf("Trouve : %s\n", result);
-	else
-		printf("Pas trouvé\n");
-	return (0);
 }
