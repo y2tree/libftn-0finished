@@ -6,7 +6,7 @@
 /*   By: vasari <vasari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/23 21:24:49 by vasari            #+#    #+#             */
-/*   Updated: 2025/11/23 23:26:45 by vasari           ###   ########.fr       */
+/*   Updated: 2025/11/24 09:52:40 by vasari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-static int	count_digits(int n)
+static int	get_number_length(int n)
 {
 	int	len;
 
@@ -28,7 +28,7 @@ static int	count_digits(int n)
 	return (len + 1);
 }
 
-static void	fill_digits(char *result, int n, int pos)
+static void	write_number_to_string(char *result, int n, int pos)
 {
 	while (n > 0)
 	{
@@ -55,13 +55,13 @@ char	*ft_itoa(int n)
 		is_negative = 1;
 		n = -n;
 	}
-	len = count_digits(n);
+	len = get_number_length(n);
 	result = malloc(len + is_negative + 1);
 	if (!result)
 		return (NULL);
 	pos = len + is_negative - 1;
 	result[pos + 1] = '\0';
-	fill_digits(result, n, pos);
+	write_number_to_string(result, n, pos);
 	if (is_negative)
 		result[0] = '-';
 	return (result);
